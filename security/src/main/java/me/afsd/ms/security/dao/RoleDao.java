@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 /**
  * 角色Dao
  * @author XuHui (416422546@qq.com)
- * @version 0.0.1-SNAPSHOT
+ * @version 0.0.1
  */
 @Repository
 public interface RoleDao extends BaseNameResitory<Role,Long>{

@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 /**
  * @author XuHui (416422546@qq.com)
- * @version 0.0.1-SNAPSHOT
+ * @version 0.0.1
  */
 @Service
 public class ModuleService extends BaseService<Module,Long>{
