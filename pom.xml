@@ -97,6 +97,7 @@
                 <artifactId>maven-release-plugin</artifactId>
                 <version>2.5.3</version>
                 <configuration>
+                    <branchName>0.0.1</branchName>
                     <autoVersionSubmodules>true</autoVersionSubmodules>
                 </configuration>
             </plugin>
