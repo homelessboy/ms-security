@@ -18,6 +18,24 @@
         <afsd.framework>0.0.1-SNAPSHOT</afsd.framework>
     </properties>
 
+    <scm>
+        <url>https://github.com/homelessboy/ms-security</url>
+        <connection>scm:git:git@github.com:homelessboy/ms-security.git</connection>
+        <developerConnection>scm:git:git@github.com:homelessboy/ms-security.git</developerConnection>
+    </scm>
+
+    <developers>
+        <developer>
+            <id>xuhui</id>
+            <name>XuHui</name>
+            <email>416422546@qq.com</email>
+            <roles>
+                <role>Manager</role>
+                <role>SoftwareEngineer</role>
+            </roles>
+        </developer>
+    </developers>
+
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -62,7 +80,45 @@
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
+
+            <!-- resources插件 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.7</version>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+
+            <!-- release插件 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5.3</version>
+                <configuration>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
+
+    <distributionManagement>
+        <site>
+            <id>test</id>
+            <name>testname</name>
+            <url>file:///E:/test</url>
+        </site>
+        <repository>
+            <id>releases</id>
+            <name>Internal Releases</name>
+            <url>http://192.168.2.231/nexus/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>Internal Snapshots</name>
+            <url>http://192.168.2.231/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
 </project>
