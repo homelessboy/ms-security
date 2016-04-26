@@ -20,7 +20,7 @@
         <url>https://github.com/homelessboy/ms-security</url>
         <connection>scm:git:git@github.com:homelessboy/ms-security.git</connection>
         <developerConnection>scm:git:git@github.com:homelessboy/ms-security.git</developerConnection>
-      <tag>0.0.1</tag>
+      <tag>HEAD</tag>
   </scm>
 
     <developers>
