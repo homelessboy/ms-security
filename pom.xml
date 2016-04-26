@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>me.afsd.ms</groupId>
+    <artifactId>me-afsd-ms</artifactId>
+    <packaging>pom</packaging>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <modules>
+        <module>security</module>
+    </modules>
+
+    <properties>
+        <JDK>1.8</JDK>
+        <afsd.framework>0.0.1-SNAPSHOT</afsd.framework>
+    </properties>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.3.3.RELEASE</version>
+    </parent>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>me.afsd</groupId>
+                <artifactId>me-afsd-framework</artifactId>
+                <version>${afsd.framework}</version>
+            </dependency>
+            <dependency>
+                <groupId>me.afsd</groupId>
+                <artifactId>me-afsd-domain</artifactId>
+                <version>${afsd.framework}</version>
+            </dependency>
+            <dependency>
+                <groupId>me.afsd</groupId>
+                <artifactId>me-afsd-dao</artifactId>
+                <version>${afsd.framework}</version>
+            </dependency>
+            <dependency>
+                <groupId>me.afsd</groupId>
+                <artifactId>me-afsd-service</artifactId>
+                <version>${afsd.framework}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <!-- 设置项目编译属性 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.5.1</version>
+                <configuration>
+                    <source>${JDK}</source>
+                    <target>${JDK}</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
