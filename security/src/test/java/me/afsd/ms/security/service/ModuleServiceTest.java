@@ -1,6 +1,5 @@
 package me.afsd.ms.security.service;
 
-import com.sun.org.apache.xpath.internal.operations.Mod;
 import me.afsd.ms.security.SecurityApplication;
 import me.afsd.ms.security.domain.Module;
 import org.junit.Before;
@@ -36,6 +35,7 @@ public class ModuleServiceTest {
         module.setCode("module1");
         Optional<Module> moduleOptional=moduleService.save(module);
         id=moduleOptional.get().getId();
+        System.out.println("set up 1");
     }
 
     @Test
@@ -53,11 +53,7 @@ public class ModuleServiceTest {
     }
 
     @Test
-    public void test1(){
-        Module module=new Module();
-        module.setId(id);
-        module.setVersion(10);
-        moduleService.save(module);
-        System.out.println();
+    public void test2(){
+        System.out.println("test2");
     }
 }

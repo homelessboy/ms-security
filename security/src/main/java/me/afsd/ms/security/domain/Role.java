@@ -39,6 +39,12 @@ public class Role extends BaseDomain<Long>{
     @OneToMany(mappedBy = "role",cascade = {CascadeType.REFRESH,CascadeType.REMOVE})
     private List<RolePermission> rolePermissions;
 
+    /**
+     * 拥有该角色的用户
+     */
+    @OneToMany(mappedBy = "role")
+    private List<User> users;
+
     public String getName() {
         return name;
     }
@@ -69,5 +75,13 @@ public class Role extends BaseDomain<Long>{
 
     public void setRolePermissions(List<RolePermission> rolePermissions) {
         this.rolePermissions = rolePermissions;
+    }
+
+    public List<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(List<User> users) {
+        this.users = users;
     }
 }
